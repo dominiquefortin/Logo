@@ -58,14 +58,15 @@ function runBloc (start, repeat) {
 
         index = runBloc(index, arg);
 
-      } else if (commands1arg[token]) {
-        commands1arg[token]();
+      } else if (commands0arg[token]) {
+        commands0arg[token]();
 
-      } else if (commands2arg[token]) {
+      } else if (commands1arg[token]) {
         arg = 1*tokens[index++];
         if (arg !== 0 && (!arg || arg < 1)) throw "Syntax error. Found '"+tokens[index-1]+"' but wanted a number.";
 
-        commands2arg[token](arg);
+        commands1arg[token](arg);
+
       } else {
         throw "Syntax error. Found unknown command '"+tokens[index-1]+"'.";
       }
