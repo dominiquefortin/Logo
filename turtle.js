@@ -1,4 +1,13 @@
-const commands = {
+const commands1arg = {
+  "pu": function () {
+    turtle.pen = false;
+  },
+  "pd": function () {
+    turtle.pen = true;
+  }
+}
+
+const commands2arg = {
   "fd": function (amt) {
     turtle.forward(amt);
   },
@@ -10,12 +19,6 @@ const commands = {
   },
   "lt": function (angle) {
     turtle.right(-angle);
-  },
-  "pu": function () {
-    turtle.pen = false;
-  },
-  "pd": function () {
-    turtle.pen = true;
   }
 }
 
@@ -27,7 +30,7 @@ class Turtle {
   }
 
   reset() {
-    console.log(this.x, this.y, this.dir);
+    //console.log(this.x, this.y, this.dir);
     translate(this.x, this.y);
     rotate(this.dir);
     this.pen = true;
@@ -46,6 +49,4 @@ class Turtle {
   right(angle) {
     rotate(angle);
   }
-
-
 }
