@@ -1,4 +1,4 @@
-const commands1arg = {
+const commands0arg = {
   "pu": function () {
     turtle.pen = false;
   },
@@ -7,7 +7,7 @@ const commands1arg = {
   }
 }
 
-const commands2arg = {
+const commands1arg = {
   "fd": function (amt) {
     turtle.forward(amt);
   },
